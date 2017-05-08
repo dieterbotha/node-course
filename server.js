@@ -25,6 +25,14 @@ app.get('/about', (req, res) => {
   });
 });
 
+// about
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    currentYear: new Date().getFullYear(),
+    welcomeMessage: 'My Project Portfolio'
+  });
+});
+
 
 // /bad
 app.get('/bad', (req, res) => {
